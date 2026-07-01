@@ -23,7 +23,13 @@ document.querySelectorAll(".sidebar li").forEach(item=>{
 
 // ===== Load Username =====
 const username=document.getElementById("username");
-const savedName=localStorage.getItem("amd_profile_0");
+const username = document.getElementById("username");
+
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (username && user) {
+    username.textContent = user.fullname || user.username;
+}
 
 if(username && savedName){
     username.textContent=savedName;
@@ -31,11 +37,7 @@ if(username && savedName){
 
 // ===== Profile Image =====
 const profileImg=document.querySelector(".profile-img");
-const previewAvatar=document.getElementById("profilePreview");
 
-if(profileImg && previewAvatar){
-    profileImg.src=previewAvatar.src;
-}
 
 // ===== Notification Badge =====
 const bell=document.querySelector(".top-right .fa-bell");
@@ -126,7 +128,8 @@ e.preventDefault();
 return;
 }
 
-localStorage.removeItem("amd_session");
+localStorage.removeItem("token");
+localStorage.removeItem("user");
 
 });
 
