@@ -552,3 +552,149 @@ console.log("AMD Marketplace Step 4 JS Complete");
 
 });
 
+// AMD Marketplace - Profile Setup Step 5 JS (Part 1)
+document.addEventListener("DOMContentLoaded",()=>{
+
+// ===== Step Elements =====
+const step5=document.getElementById("step5");
+
+if(!step5) return;
+
+// ===== Load Basic Preview =====
+const setText=(id,value)=>{
+    const el=document.getElementById(id);
+    if(el) el.textContent=value || "Not Provided";
+};
+
+setText("previewName",localStorage.getItem("amd_profile_0"));
+setText("previewUsername",localStorage.getItem("amd_profile_1"));
+setText("previewCountry",localStorage.getItem("amd_profile_2"));
+setText("previewCity",localStorage.getItem("amd_profile_3"));
+
+const role=localStorage.getItem("amd_role") || "Client";
+setText("previewRole",role);
+
+// ===== Category =====
+const category=document.querySelector("#step3 select");
+if(category){
+    setText("previewCategory",category.value);
+}
+
+// ===== Skills Preview =====
+const skillsContainer=document.getElementById("previewSkills");
+
+if(skillsContainer){
+
+    skillsContainer.innerHTML="";
+
+    let skills=[];
+
+    try{
+        skills=JSON.parse(localStorage.getItem("amd_skills")) || [];
+    }catch(e){
+        skills=[];
+    }
+
+    if(skills.length===0){
+        skillsContainer.innerHTML="<span>No skills added.</span>";
+    }else{
+
+        skills.forEach(skill=>{
+
+            const tag=document.createElement("div");
+
+            tag.className="skill-tag";
+
+            tag.textContent=skill;
+
+            skillsContainer.appendChild(tag);
+
+        });
+
+    }
+
+}
+
+// ===== Avatar Preview =====
+const avatar=document.getElementById("previewAvatar");
+const profile=document.getElementById("profilePreview");
+
+if(avatar && profile){
+    avatar.src=profile.src;
+}
+
+console.log("AMD Marketplace Step 5 JS Part 1 Loaded");
+
+});
+// AMD Marketplace - Profile Setup Step 5 JS (Part 2)
+document.addEventListener("DOMContentLoaded",()=>{
+
+// ===== Portfolio Preview =====
+const setPreview=(id,value)=>{
+    const el=document.getElementById(id);
+    if(el) el.textContent=value || "Not Provided";
+};
+
+const step4Inputs=document.querySelectorAll("#step4 input[type='url']");
+
+if(step4Inputs.length>=3){
+    setPreview("previewPortfolio",step4Inputs[0].value);
+    setPreview("previewGithub",step4Inputs[1].value);
+    setPreview("previewBehance",step4Inputs[2].value);
+}
+
+// ===== Resume & Certificates =====
+const resume=document.getElementById("resumeUpload");
+const certs=document.getElementById("certificateUpload");
+
+if(resume && resume.files.length){
+    setPreview("previewResume",resume.files[0].name);
+}
+
+if(certs){
+    setPreview("previewCertificates",certs.files.length+" Uploaded");
+}
+
+// ===== Complete Profile =====
+const completeBtn=document.getElementById("completeProfileBtn");
+const success=document.getElementById("setupSuccess");
+const step5=document.getElementById("step5");
+
+if(completeBtn){
+    completeBtn.addEventListener("click",()=>{
+
+        localStorage.setItem("amd_profile_completed","true");
+
+        if(step5) step5.style.display="none";
+        if(success) success.style.display="block";
+
+    });
+}
+
+// ===== Dashboard Redirect =====
+const dashboardBtn=document.getElementById("goDashboardBtn");
+
+if(dashboardBtn){
+    dashboardBtn.addEventListener("click",()=>{
+
+        const role=localStorage.getItem("amd_role") || "client";
+
+        // Cleanup temporary data
+        for(let i=0;i<30;i++){
+            localStorage.removeItem("amd_profile_"+i);
+            localStorage.removeItem("amd_step3_"+i);
+            localStorage.removeItem("amd_step4_"+i);
+        }
+
+        if(role==="freelancer"){
+            window.location.href="freelancer-dashboard.html";
+        }else{
+            window.location.href="client-dashboard.html";
+        }
+
+    });
+}
+
+console.log("AMD Marketplace Step 5 JS Complete");
+
+});
