@@ -258,3 +258,141 @@ if(firstInput){
 console.log("AMD Marketplace Profile Setup JS Complete");
 
 });
+// AMD Marketplace - Profile Setup Step 3 JS (Part 1)
+document.addEventListener("DOMContentLoaded",()=>{
+
+// ===== Detect User Role =====
+const role = localStorage.getItem("amd_role") || "client";
+
+const freelancerFields = document.getElementById("freelancerFields");
+const freelancerAdvanced = document.getElementById("freelancerAdvanced");
+const clientFields = document.getElementById("clientFields");
+const clientAdvanced = document.getElementById("clientAdvanced");
+
+function updateRoleUI(){
+    if(role === "freelancer"){
+        if(freelancerFields) freelancerFields.style.display="block";
+        if(freelancerAdvanced) freelancerAdvanced.style.display="block";
+        if(clientFields) clientFields.style.display="none";
+        if(clientAdvanced) clientAdvanced.style.display="none";
+    }else{
+        if(clientFields) clientFields.style.display="block";
+        if(clientAdvanced) clientAdvanced.style.display="block";
+        if(freelancerFields) freelancerFields.style.display="none";
+        if(freelancerAdvanced) freelancerAdvanced.style.display="none";
+    }
+}
+
+updateRoleUI();
+
+// ===== Step Navigation =====
+const step2=document.getElementById("step2");
+const step3=document.getElementById("step3");
+
+const nextToStep3=document.getElementById("nextStepBtn");
+const backToStep2=document.getElementById("backToStep2");
+
+if(nextToStep3 && step2 && step3){
+    nextToStep3.addEventListener("click",()=>{
+        step2.style.display="none";
+        step3.style.display="block";
+    });
+}
+
+if(backToStep2 && step2 && step3){
+    backToStep2.addEventListener("click",()=>{
+        step3.style.display="none";
+        step2.style.display="block";
+    });
+}
+
+// ===== Progress Update =====
+const progress=document.querySelector(".progress-fill");
+const progressText=document.querySelector(".progress-text span");
+
+if(step3 && progress && progressText){
+    const observer=new MutationObserver(()=>{
+        if(step3.style.display==="block"){
+            progress.style.width="60%";
+            progressText.textContent="Step 3 of 5";
+        }
+    });
+
+    observer.observe(step3,{
+        attributes:true,
+        attributeFilter:["style"]
+    });
+}
+
+console.log("AMD Marketplace Step 3 JS Part 1 Loaded");
+
+});
+// AMD Marketplace - Profile Setup Step 3 JS (Part 2)
+document.addEventListener("DOMContentLoaded",()=>{
+
+// ===== Auto Save =====
+document.querySelectorAll("#step3 input,#step3 select,#step3 textarea").forEach((field,index)=>{
+    const key="amd_step3_"+index;
+
+    if(localStorage.getItem(key)){
+        field.value=localStorage.getItem(key);
+    }
+
+    field.addEventListener("input",()=>{
+        localStorage.setItem(key,field.value);
+    });
+
+    field.addEventListener("change",()=>{
+        localStorage.setItem(key,field.value);
+    });
+});
+
+// ===== Validation =====
+const nextBtn=document.getElementById("nextToStep4");
+
+if(nextBtn){
+    nextBtn.addEventListener("click",()=>{
+
+        let valid=true;
+
+        document.querySelectorAll("#step3 input[required],#step3 select[required],#step3 textarea[required]").forEach(field=>{
+
+            if(field.value.trim()===""){
+                field.style.borderColor="red";
+                valid=false;
+            }else{
+                field.style.borderColor="#22c55e";
+            }
+
+        });
+
+        if(!valid){
+            alert("Please complete all required fields.");
+            return;
+        }
+
+        // Step 4 placeholder
+        const step3=document.getElementById("step3");
+        const step4=document.getElementById("step4");
+
+        if(step3) step3.style.display="none";
+        if(step4) step4.style.display="block";
+
+        const progress=document.querySelector(".progress-fill");
+        const progressText=document.querySelector(".progress-text span");
+
+        if(progress) progress.style.width="80%";
+        if(progressText) progressText.textContent="Step 4 of 5";
+
+    });
+}
+
+// ===== Mobile Touch Feedback =====
+document.querySelectorAll("#step3 button").forEach(btn=>{
+    btn.addEventListener("touchstart",()=>btn.style.opacity=".85");
+    btn.addEventListener("touchend",()=>btn.style.opacity="1");
+});
+
+console.log("AMD Marketplace Step 3 JS Complete");
+
+});
