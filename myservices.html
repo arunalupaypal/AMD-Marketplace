@@ -1,1 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Services | AMD Marketplace</title>
+
+<link rel="icon" type="image/png" href="images/dj.png">
+<link rel="stylesheet" href="myservices.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="bg-blur blur1"></div>
+<div class="bg-blur blur2"></div>
+<div class="bg-blur blur3"></div>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+<div class="logo">
+<img src="images/dj.png" alt="AMD">
+<h2>AMD</h2>
+</div>
+
+<ul>
+
+<li>
+<a href="freelancer-dashboard.html">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li class="active">
+<a href="#">
+<i class="fa-solid fa-layer-group"></i>
+<span>My Services</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-box"></i>
+<span>Orders</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-message"></i>
+<span>Messages</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-wallet"></i>
+<span>Earnings</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-star"></i>
+<span>Reviews</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-bell"></i>
+<span>Notifications</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+<li>
+<a href="index.html">
+<i class="fa-solid fa-right-from-bracket"></i>
+<span>Logout</span>
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+<header class="topbar">
+
+<div class="menu-btn">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="search-box">
+<input type="text" placeholder="Search services...">
+</div>
+
+<div class="top-right">
+
+<button class="create-service-btn">
+<i class="fa-solid fa-plus"></i>
+Create New Service
+</button>
+
+<img src="images/default-avatar.png"
+class="profile-img"
+alt="Profile">
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>My Services</h1>
+
+<p>
+Manage, edit and monitor all your marketplace services from one place.
+</p>
+
+</section>
+
+<section class="stats-grid">
+
+<div class="card">
+<h3>Total Services</h3>
+<h2>0</h2>
+</div>
+
+<div class="card">
+<h3>Active Services</h3>
+<h2>0</h2>
+</div>
+
+<div class="card">
+<h3>Total Orders</h3>
+<h2>0</h2>
+</div>
+
+<div class="card">
+<h3>Total Earnings</h3>
+<h2>$0</h2>
+</div>
+
+</section>
+
+<section class="filters">
+
+<select>
+<option>All Categories</option>
+</select>
+
+<select>
+<option>All Status</option>
+</select>
+
+<select>
+<option>Newest First</option>
+</select>
+
+</section>
+
+<!-- ========================= -->
+<!-- PART 2 STARTS HERE -->
+<!-- ========================= --><section class="services-grid">
+
+<!-- Create New Service -->
+<div class="service-card add-card">
+
+<div class="add-icon">
+<i class="fa-solid fa-circle-plus"></i>
+</div>
+
+<h2>Create New Service</h2>
+
+<p>
+Launch a new service and start receiving orders from clients worldwide.
+</p>
+
+<button class="create-btn">
+<i class="fa-solid fa-plus"></i>
+Create Service
+</button>
+
+</div>
+
+<!-- Service Card 1 -->
+<div class="service-card">
+
+<img src="images/service-placeholder.jpg" alt="Service">
+
+<div class="service-content">
+
+<span class="status active">
+Active
+</span>
+
+<h3>Professional Logo Design</h3>
+
+<p>
+Create modern business logos with unlimited revisions.
+</p>
+
+<div class="service-stats">
+
+<span>
+<i class="fa-solid fa-eye"></i>
+0 Views
+</span>
+
+<span>
+<i class="fa-solid fa-cart-shopping"></i>
+0 Orders
+</span>
+
+<span>
+<i class="fa-solid fa-star"></i>
+0.0
+</span>
+
+</div>
+
+<h2 class="price">
+Starting at $10
+</h2>
+
+<div class="service-buttons">
+
+<button class="preview-btn">
+<i class="fa-solid fa-eye"></i>
+Preview
+</button>
+
+<button class="edit-btn">
+<i class="fa-solid fa-pen"></i>
+Edit
+</button>
+
+<button class="analytics-btn">
+<i class="fa-solid fa-chart-line"></i>
+Analytics
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Service Card 2 -->
+
+<div class="service-card">
+
+<img src="images/service-placeholder.jpg" alt="Service">
+
+<div class="service-content">
+
+<span class="status draft">
+Draft
+</span>
+
+<h3>Professional Video Editing</h3>
+
+<p>
+High quality YouTube, Shorts, TikTok and Reels editing.
+</p>
+
+<div class="service-stats">
+
+<span>
+<i class="fa-solid fa-eye"></i>
+0 Views
+</span>
+
+<span>
+<i class="fa-solid fa-cart-shopping"></i>
+0 Orders
+</span>
+
+<span>
+<i class="fa-solid fa-star"></i>
+0.0
+</span>
+
+</div>
+
+<h2 class="price">
+Starting at $25
+</h2>
+
+<div class="service-buttons">
+
+<button class="publish-btn">
+<i class="fa-solid fa-upload"></i>
+Publish
+</button>
+
+<button class="edit-btn">
+<i class="fa-solid fa-pen"></i>
+Edit
+</button>
+
+<button class="delete-btn">
+<i class="fa-solid fa-trash"></i>
+Delete
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PART 3 STARTS HERE -->
+<!-- ========================= --><!-- ========================= -->
+<!-- BULK ACTIONS -->
+<!-- ========================= -->
+
+<section class="bulk-actions">
+
+<div class="bulk-left">
+
+<button class="bulk-btn">
+<i class="fa-solid fa-check-double"></i>
+Select All
+</button>
+
+<button class="bulk-btn">
+<i class="fa-solid fa-pause"></i>
+Pause
+</button>
+
+<button class="bulk-btn">
+<i class="fa-solid fa-play"></i>
+Activate
+</button>
+
+<button class="bulk-btn delete">
+<i class="fa-solid fa-trash"></i>
+Delete
+</button>
+
+</div>
+
+<div class="bulk-right">
+
+<span>
+Showing 2 of 2 Services
+</span>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PERFORMANCE -->
+<!-- ========================= -->
+
+<section class="performance-grid">
+
+<div class="performance-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Performance Score</h3>
+
+<h2>0%</h2>
+
+</div>
+
+<div class="performance-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Response Rate</h3>
+
+<h2>0%</h2>
+
+</div>
+
+<div class="performance-card">
+
+<i class="fa-solid fa-ranking-star"></i>
+
+<h3>Seller Level</h3>
+
+<h2>New Seller</h2>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SMART SUGGESTIONS -->
+<!-- ========================= -->
+
+<section class="smart-panel">
+
+<h2>
+
+<i class="fa-solid fa-robot"></i>
+
+AMD Smart Suggestions
+
+</h2>
+
+<ul>
+
+<li>Use attractive cover images.</li>
+
+<li>Add SEO friendly titles.</li>
+
+<li>Use detailed descriptions.</li>
+
+<li>Offer multiple pricing packages.</li>
+
+<li>Respond to clients quickly.</li>
+
+</ul>
+
+</section>
+
+<!-- ========================= -->
+<!-- QUICK TIPS -->
+<!-- ========================= -->
+
+<section class="tips-grid">
+
+<div class="tip-card">
+
+<h3>📸 Better Images</h3>
+
+<p>
+High-quality cover images increase clicks.
+</p>
+
+</div>
+
+<div class="tip-card">
+
+<h3>📝 Better Description</h3>
+
+<p>
+Clearly explain your service to buyers.
+</p>
+
+</div>
+
+<div class="tip-card">
+
+<h3>⭐ Collect Reviews</h3>
+
+<p>
+Deliver quality work to gain positive reviews.
+</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PART 4 STARTS HERE -->
+<!-- ========================= --><!-- ========================= -->
+<!-- ANALYTICS MODAL -->
+<!-- ========================= -->
+
+<div class="modal" id="analyticsModal">
+
+<div class="modal-content">
+
+<h2>
+<i class="fa-solid fa-chart-line"></i>
+Service Analytics
+</h2>
+
+<div class="analytics-grid">
+
+<div class="analytics-card">
+<h3>Views</h3>
+<p>0</p>
+</div>
+
+<div class="analytics-card">
+<h3>Clicks</h3>
+<p>0</p>
+</div>
+
+<div class="analytics-card">
+<h3>Orders</h3>
+<p>0</p>
+</div>
+
+<div class="analytics-card">
+<h3>Conversion</h3>
+<p>0%</p>
+</div>
+
+</div>
+
+<button class="close-modal">
+Close
+</button>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- DELETE MODAL -->
+<!-- ========================= -->
+
+<div class="modal" id="deleteModal">
+
+<div class="modal-content">
+
+<h2>Delete Service</h2>
+
+<p>
+Are you sure you want to permanently delete this service?
+</p>
+
+<div class="modal-buttons">
+
+<button class="cancel-btn">
+Cancel
+</button>
+
+<button class="confirm-delete-btn">
+Delete
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- PAGINATION -->
+<!-- ========================= -->
+
+<section class="pagination">
+
+<button>
+<i class="fa-solid fa-angle-left"></i>
+Previous
+</button>
+
+<span>
+Page 1 of 1
+</span>
+
+<button>
+Next
+<i class="fa-solid fa-angle-right"></i>
+</button>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer class="dashboard-footer">
+
+<p>
+© 2026 AMD Marketplace. All Rights Reserved.
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="myservices.js"></script>
+
+</body>
+</html>
