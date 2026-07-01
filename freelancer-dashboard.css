@@ -439,3 +439,30 @@ height:40px;
 }
 
 /* ===== END OF CSS ===== */
+/* Quick Actions */
+
+.action-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:20px;
+}
+
+.action-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:15px 22px;
+background:linear-gradient(135deg,#2563eb,#4f46e5);
+color:#fff;
+text-decoration:none;
+border-radius:12px;
+font-weight:600;
+min-width:180px;
+box-shadow:0 10px 25px rgba(37,99,235,.35);
+}
+
+.action-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(37,99,235,.45);
+}
