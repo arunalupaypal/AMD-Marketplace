@@ -1,1 +1,159 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Setup | AMD Marketplace</title>
+
+<link rel="icon" type="image/png" href="images/dj.png">
+<link rel="stylesheet" href="profile-setup.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="bg-blur blur-1"></div>
+<div class="bg-blur blur-2"></div>
+<div class="bg-blur blur-3"></div>
+
+<header>
+<nav class="navbar">
+
+<div class="logo">
+<a href="index.html">
+<img src="images/dj.png" alt="AMD Marketplace">
+</a>
+</div>
+
+<div class="nav-right">
+<a href="logout.html" class="logout-btn">Logout</a>
+</div>
+
+</nav>
+</header>
+
+<section class="setup-section">
+
+<div class="setup-card">
+
+<div class="progress-area">
+
+<div class="progress-text">
+<span>Step 1 of 5</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress-fill" style="width:20%;"></div>
+</div>
+
+</div>
+
+<div class="welcome-box">
+
+<div class="welcome-icon">
+👋
+</div>
+
+<h1>Welcome to AMD Marketplace</h1>
+
+<p>
+Let's build your professional profile before you start using the platform.
+This process takes less than 2 minutes.
+</p>
+
+<ul class="welcome-features">
+<li>✔ Trusted Marketplace Profile</li>
+<li>✔ Better Visibility</li>
+<li>✔ Secure Account</li>
+<li>✔ Personalized Dashboard</li>
+</ul>
+
+<button id="startSetupBtn" class="primary-btn">
+Get Started
+</button>
+
+</div>
+
+<!-- PROFILE SETUP PART 2 STARTS HERE -->
+<!-- Step 2 : Personal Information -->
+
+<div id="step2" class="setup-step">
+
+<h2>Personal Information</h2>
+
+<p>Tell us a little about yourself.</p>
+
+<form id="profileSetupForm">
+
+<div class="profile-photo-area">
+
+<img src="images/default-avatar.png" id="profilePreview" alt="Profile Photo">
+
+<label for="profilePhoto" class="upload-btn">
+Upload Profile Photo
+</label>
+
+<input type="file" id="profilePhoto" accept="image/*" hidden>
+
+</div>
+
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" placeholder="Enter your full name">
+</div>
+
+<div class="input-group">
+<label>Username</label>
+<input type="text" placeholder="@username">
+</div>
+
+<div class="input-row">
+
+<div class="input-group">
+<label>Country</label>
+<select>
+<option selected>Sri Lanka</option>
+<option>India</option>
+<option>United States</option>
+<option>United Kingdom</option>
+<option>Australia</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>City</label>
+<input type="text" placeholder="Enter your city">
+</div>
+
+</div>
+
+<div class="input-group">
+<label>Date of Birth (Optional)</label>
+<input type="date">
+</div>
+
+<div class="step-buttons">
+
+<button type="button" class="back-btn">
+Back
+</button>
+
+<button type="button" id="nextStepBtn" class="primary-btn">
+Continue
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="profile-setup.js"></script>
+
+</body>
+</html>
