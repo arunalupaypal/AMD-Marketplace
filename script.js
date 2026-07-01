@@ -62,21 +62,55 @@ searchBtn.addEventListener("click", () => {
 // Language Button
 const languageBtn = document.querySelector(".language-btn");
 
-let english = false;
+let isSinhala = false;
 
 languageBtn.addEventListener("click", () => {
 
-    if (!english) {
+    isSinhala = !isSinhala;
+
+    if(isSinhala){
 
         languageBtn.innerHTML = "🌐 English";
 
-        english = true;
+        document.querySelector(".hero h1").innerHTML =
+        "ඔබගේ ඊළඟ ව්‍යාපෘතිය සඳහා<br>හොඳම Freelancer සොයා ගන්න";
 
-    } else {
+        document.querySelector(".hero p").innerHTML =
+        "ශ්‍රී ලංකාවේ නවීන Freelancer Marketplace";
+
+        document.querySelector(".search-box input").placeholder =
+        "සේවාවක් සොයන්න...";
+
+        document.querySelector(".search-box button").innerHTML =
+        "සොයන්න";
+
+        document.querySelector(".explore-btn").innerHTML =
+        "සේවාවන් බලන්න";
+
+        document.querySelector(".become-btn").innerHTML =
+        "Freelancer කෙනෙක් වන්න";
+
+    }else{
 
         languageBtn.innerHTML = "🌐 සිංහල";
 
-        english = false;
+        document.querySelector(".hero h1").innerHTML =
+        "Find The Perfect Freelancer<br>For Your Next Project";
+
+        document.querySelector(".hero p").innerHTML =
+        "Sri Lanka's Modern Freelancer Marketplace";
+
+        document.querySelector(".search-box input").placeholder =
+        "Search services...";
+
+        document.querySelector(".search-box button").innerHTML =
+        "Search";
+
+        document.querySelector(".explore-btn").innerHTML =
+        "Explore Services";
+
+        document.querySelector(".become-btn").innerHTML =
+        "Become a Freelancer";
 
     }
 
