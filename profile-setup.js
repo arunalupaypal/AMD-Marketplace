@@ -396,3 +396,159 @@ document.querySelectorAll("#step3 button").forEach(btn=>{
 console.log("AMD Marketplace Step 3 JS Complete");
 
 });
+
+// AMD Marketplace - Profile Setup Step 4 JS (Part 1)
+document.addEventListener("DOMContentLoaded",()=>{
+
+// ===== Role Detection =====
+const role = localStorage.getItem("amd_role") || "client";
+
+const freelancerStep4=document.getElementById("freelancerStep4");
+const clientStep4=document.getElementById("clientStep4");
+
+if(role==="freelancer"){
+    if(freelancerStep4) freelancerStep4.style.display="block";
+    if(clientStep4) clientStep4.style.display="none";
+}else{
+    if(clientStep4) clientStep4.style.display="block";
+    if(freelancerStep4) freelancerStep4.style.display="none";
+}
+
+// ===== Skills =====
+const skillInput=document.getElementById("skillInput");
+const addSkillBtn=document.getElementById("addSkillBtn");
+const skillsContainer=document.getElementById("skillsContainer");
+
+let skills=[];
+
+function renderSkills(){
+    if(!skillsContainer) return;
+
+    skillsContainer.innerHTML="";
+
+    skills.forEach((skill,index)=>{
+        const tag=document.createElement("div");
+        tag.className="skill-tag";
+
+        tag.innerHTML=`
+            <span>${skill}</span>
+            <button type="button" data-index="${index}">&times;</button>
+        `;
+
+        skillsContainer.appendChild(tag);
+    });
+
+    skillsContainer.querySelectorAll("button").forEach(btn=>{
+        btn.addEventListener("click",()=>{
+            const i=parseInt(btn.dataset.index);
+            skills.splice(i,1);
+            localStorage.setItem("amd_skills",JSON.stringify(skills));
+            renderSkills();
+        });
+    });
+}
+
+try{
+    skills=JSON.parse(localStorage.getItem("amd_skills")) || [];
+}catch(e){
+    skills=[];
+}
+
+renderSkills();
+
+if(addSkillBtn && skillInput){
+    addSkillBtn.addEventListener("click",()=>{
+
+        const value=skillInput.value.trim();
+
+        if(!value) return;
+
+        if(!skills.includes(value)){
+            skills.push(value);
+            localStorage.setItem("amd_skills",JSON.stringify(skills));
+            renderSkills();
+        }
+
+        skillInput.value="";
+        skillInput.focus();
+
+    });
+}
+
+console.log("AMD Marketplace Step 4 JS Part 1 Loaded");
+
+});
+// AMD Marketplace - Profile Setup Step 4 JS (Part 2)
+document.addEventListener("DOMContentLoaded",()=>{
+
+// ===== Auto Save Fields =====
+document.querySelectorAll("#step4 input,#step4 textarea").forEach((field,index)=>{
+    const key="amd_step4_"+index;
+
+    if(field.type!=="file"){
+        field.value=localStorage.getItem(key)||"";
+    }
+
+    field.addEventListener("input",()=>{
+        if(field.type!=="file"){
+            localStorage.setItem(key,field.value);
+        }
+    });
+});
+
+// ===== Resume Upload =====
+const resume=document.getElementById("resumeUpload");
+
+if(resume){
+    resume.addEventListener("change",()=>{
+        if(resume.files.length){
+            alert("Resume selected: "+resume.files[0].name);
+        }
+    });
+}
+
+// ===== Certificate Upload =====
+const certificate=document.getElementById("certificateUpload");
+
+if(certificate){
+    certificate.addEventListener("change",()=>{
+        if(certificate.files.length){
+            alert(certificate.files.length+" certificate(s) selected.");
+        }
+    });
+}
+
+// ===== Step Navigation =====
+const back=document.getElementById("backToStep3");
+const next=document.getElementById("nextToStep5");
+
+const step3=document.getElementById("step3");
+const step4=document.getElementById("step4");
+const step5=document.getElementById("step5");
+
+if(back){
+    back.addEventListener("click",()=>{
+        if(step4) step4.style.display="none";
+        if(step3) step3.style.display="block";
+    });
+}
+
+if(next){
+    next.addEventListener("click",()=>{
+
+        if(step4) step4.style.display="none";
+        if(step5) step5.style.display="block";
+
+        const progress=document.querySelector(".progress-fill");
+        const progressText=document.querySelector(".progress-text span");
+
+        if(progress) progress.style.width="100%";
+        if(progressText) progressText.textContent="Step 5 of 5";
+
+    });
+}
+
+console.log("AMD Marketplace Step 4 JS Complete");
+
+});
+
