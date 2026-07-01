@@ -1,136 +1,60 @@
-// ==============================
-// AMD Marketplace
-// Main JavaScript
-// ==============================
+// ============================== // AMD Marketplace - script.js //
+==============================
 
-// Page Loaded Animation
-window.addEventListener("load", () => {
-    document.body.style.opacity = "1";
-});
+// Fade in window.addEventListener(“load”, () => {
+document.body.style.opacity = “1”; });
 
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
+// Navbar shadow const navbar = document.querySelector(“.navbar”);
+window.addEventListener(“scroll”, () => { if (navbar) {
+navbar.style.boxShadow = window.scrollY > 50 ? “0 10px 25px
+rgba(0,0,0,.08)” : “none”; } });
 
-        const target = document.querySelector(this.getAttribute("href"));
+// Search const searchBtn = document.querySelector(“.search-box
+button”); if (searchBtn) { searchBtn.addEventListener(“click”, () => {
+const input = document.querySelector(“.search-box input”); const keyword
+= input.value.trim(); if (!keyword) { alert(“Please enter a service.”);
+return; } alert(“Searching:” + keyword); }); }
 
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    });
-});
+// Language System const languageBtn =
+document.querySelector(“.language-btn”); let isSinhala =
+localStorage.getItem(“language”) === “si”;
 
-// Navbar Shadow on Scroll
-const navbar = document.querySelector(".navbar");
+function applyLanguage() { if (isSinhala) { languageBtn.innerHTML = “🌐
+English”; document.querySelector(“.hero h1”).innerHTML = “ඔබගේ ඊළඟ
+ව්‍යාපෘතිය සඳහාහොඳම Freelancer සොයා ගන්න”; document.querySelector(“.hero
+p”).innerHTML = “ශ්‍රී ලංකාවේ නවීන Freelancer Marketplace”;
+document.querySelector(“.search-box input”).placeholder = “සේවාවක්
+සොයන්න…”; document.querySelector(“.search-box button”).innerHTML =
+“සොයන්න”; document.querySelector(“.explore-btn”).innerHTML = “සේවාවන්”;
+document.querySelector(“.become-btn”).innerHTML = “Freelancer වන්න”; }
+else { languageBtn.innerHTML = “🌐 සිංහල”; document.querySelector(“.hero
+h1”).innerHTML = “Find The Perfect FreelancerFor Your Next Project”;
+document.querySelector(“.hero p”).innerHTML = “Sri Lanka’s Modern
+Freelancer Marketplace”; document.querySelector(“.search-box
+input”).placeholder = “Search services…”;
+document.querySelector(“.search-box button”).innerHTML = “Search”;
+document.querySelector(“.explore-btn”).innerHTML = “Explore Services”;
+document.querySelector(“.become-btn”).innerHTML = “Become a Freelancer”;
+} }
 
-window.addEventListener("scroll", () => {
+applyLanguage();
 
-    if (window.scrollY > 50) {
+languageBtn.addEventListener(“click”, () => { isSinhala = !isSinhala;
+localStorage.setItem(“language”, isSinhala ? “si” : “en”);
+applyLanguage(); });
 
-        navbar.style.boxShadow = "0 10px 25px rgba(0,0,0,.08)";
+// Counter Animation const counters =
+document.querySelectorAll(“#statistics h3”); const animateCounter = (el)
+=> { const txt = el.innerText.replace(//g, ““); if (!txt) return; const
+target = parseInt(txt, 10); let value = 0; const step = Math.max(1,
+Math.ceil(target / 100)); const timer = setInterval(() => { value +=
+step; if (value >= target) { value = target; clearInterval(timer); }
+el.innerText = value.toLocaleString() + (target === 49 ?”★” : “+”); },
+20); };
 
-    } else {
+const stats = document.querySelector(“#statistics”); if (stats) { const
+io = new IntersectionObserver((entries) => { entries.forEach((e) => { if
+(e.isIntersecting) { counters.forEach(animateCounter); io.disconnect();
+} }); }); io.observe(stats); }
 
-        navbar.style.boxShadow = "none";
-
-    }
-
-});
-
-// Search Button
-const searchBtn = document.querySelector(".search-box button");
-
-searchBtn.addEventListener("click", () => {
-
-    const keyword = document.querySelector(".search-box input").value;
-
-    if (keyword.trim() === "") {
-
-        alert("Please enter a service to search.");
-
-        return;
-
-    }
-
-    alert("Searching for: " + keyword);
-
-});
-
-// Language Button
-const languageBtn = document.querySelector(".language-btn");
-
-let isSinhala = false;
-
-languageBtn.addEventListener("click", () => {
-
-    isSinhala = !isSinhala;
-
-    if(isSinhala){
-
-        languageBtn.innerHTML = "🌐 English";
-
-        document.querySelector(".hero h1").innerHTML =
-        "ඔබගේ ඊළඟ ව්‍යාපෘතිය සඳහා<br>හොඳම Freelancer සොයා ගන්න";
-
-        document.querySelector(".hero p").innerHTML =
-        "ශ්‍රී ලංකාවේ නවීන Freelancer Marketplace";
-
-        document.querySelector(".search-box input").placeholder =
-        "සේවාවක් සොයන්න...";
-
-        document.querySelector(".search-box button").innerHTML =
-        "සොයන්න";
-
-        document.querySelector(".explore-btn").innerHTML =
-        "සේවාවන් බලන්න";
-
-        document.querySelector(".become-btn").innerHTML =
-        "Freelancer කෙනෙක් වන්න";
-
-    }else{
-
-        languageBtn.innerHTML = "🌐 සිංහල";
-
-        document.querySelector(".hero h1").innerHTML =
-        "Find The Perfect Freelancer<br>For Your Next Project";
-
-        document.querySelector(".hero p").innerHTML =
-        "Sri Lanka's Modern Freelancer Marketplace";
-
-        document.querySelector(".search-box input").placeholder =
-        "Search services...";
-
-        document.querySelector(".search-box button").innerHTML =
-        "Search";
-
-        document.querySelector(".explore-btn").innerHTML =
-        "Explore Services";
-
-        document.querySelector(".become-btn").innerHTML =
-        "Become a Freelancer";
-
-    }
-
-});
-
-// Hero Buttons
-document.querySelector(".explore-btn").addEventListener("click", function(e){
-
-    e.preventDefault();
-
-    alert("Explore Services page coming soon.");
-
-});
-
-document.querySelector(".become-btn").addEventListener("click", function(e){
-
-    e.preventDefault();
-
-    alert("Freelancer Registration page coming soon.");
-
-});
-
-console.log("AMD Marketplace Loaded Successfully.");
+console.log(“AMD Marketplace Loaded”);
