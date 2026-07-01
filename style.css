@@ -610,3 +610,29 @@ height:46px;
         font-size:14px;
     }
 }
+.back-home{
+    margin-top:25px;
+    text-align:center;
+}
+
+.back-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:14px 28px;
+    text-decoration:none;
+    color:#ffffff;
+    font-weight:600;
+    border-radius:50px;
+    border:2px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    transition:.35s ease;
+}
+
+.back-btn:hover{
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    border-color:#2563eb;
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(37,99,235,.35);
+}
