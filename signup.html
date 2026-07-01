@@ -1,1 +1,163 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | AMD Marketplace</title>
+
+<link rel="icon" type="image/png" href="images/dj.png">
+<link rel="stylesheet" href="signup.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg-blur blur-1"></div>
+<div class="bg-blur blur-2"></div>
+<div class="bg-blur blur-3"></div>
+
+<header>
+<nav class="navbar">
+
+<div class="logo">
+<a href="index.html">
+<img src="images/dj.png" alt="AMD Marketplace">
+</a>
+</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="#">Explore</a></li>
+<li><a href="#">Categories</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+<div class="nav-right">
+<a href="login.html" class="login-btn">Login</a>
+<a href="signup.html" class="signup-btn active">Sign Up</a>
+</div>
+
+</nav>
+</header>
+
+<section class="signup-section">
+
+<div class="signup-card">
+
+<div class="signup-header">
+<span class="badge">🚀 Join AMD Marketplace</span>
+
+<h1>Create Your Account</h1>
+
+<p>
+Choose how you want to use AMD Marketplace.
+</p>
+
+</div>
+
+<div class="account-type">
+
+<div class="type-card active" id="clientCard">
+
+<div class="icon">👤</div>
+
+<h3>Client</h3>
+
+<p>
+Hire talented freelancers for your projects.
+</p>
+
+</div>
+
+<div class="type-card" id="freelancerCard">
+
+<div class="icon">💼</div>
+
+<h3>Freelancer</h3>
+
+<p>
+Sell your professional services worldwide.
+</p>
+
+</div>
+
+</div>
+
+<form id="signupForm">
+
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" placeholder="Enter your full name">
+</div>
+
+<div class="input-group">
+<label>Email Address</label>
+<input type="email" placeholder="Enter your email">
+</div>
+
+<div class="input-row">
+
+<div class="input-group">
+<label>Password</label>
+<input type="password" placeholder="Password">
+</div>
+
+<div class="input-group">
+<label>Confirm Password</label>
+<input type="password" placeholder="Confirm Password">
+</div>
+
+</div>
+
+<!-- PART 2 CONTINUES HERE -->
+<div class="input-group">
+<label>Country</label>
+<select>
+<option selected>Sri Lanka</option>
+<option>India</option>
+<option>United Kingdom</option>
+<option>United States</option>
+<option>Australia</option>
+<option>Canada</option>
+</select>
+</div>
+
+<div class="terms">
+<label>
+<input type="checkbox" required>
+I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
+</label>
+</div>
+
+<button type="submit" class="create-btn">
+Create Account
+</button>
+
+<div class="divider">
+<span>OR</span>
+</div>
+
+<div class="social-buttons">
+<button type="button" class="google-btn">Continue with Google</button>
+<button type="button" class="facebook-btn">Continue with Facebook</button>
+</div>
+
+<p class="login-link">
+Already have an account?
+<a href="login.html">Login</a>
+</p>
+
+</form>
+
+</div>
+</section>
+
+<footer class="footer">
+<p>© 2026 AMD Marketplace. All Rights Reserved.</p>
+</footer>
+
+<script src="signup.js"></script>
+
+</body>
+</html>
