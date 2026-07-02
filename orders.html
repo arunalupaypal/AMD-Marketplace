@@ -1,1 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Orders | AMD Marketplace</title>
+
+<link rel="icon" type="image/png" href="images/dj.png">
+
+<link rel="stylesheet" href="orders.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="bg-blur blur1"></div>
+<div class="bg-blur blur2"></div>
+<div class="bg-blur blur3"></div>
+
+<div class="dashboard">
+
+<!-- ===================== -->
+<!-- Sidebar -->
+<!-- ===================== -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<img src="images/dj.png" alt="AMD">
+
+<h2>AMD</h2>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="freelancer-dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="myservices.html">
+
+<i class="fa-solid fa-layer-group"></i>
+
+<span>My Services</span>
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa-solid fa-box"></i>
+
+<span>Orders</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+<i class="fa-solid fa-message"></i>
+
+<span>Messages</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+<i class="fa-solid fa-wallet"></i>
+
+<span>Earnings</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+<i class="fa-solid fa-star"></i>
+
+<span>Reviews</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+<i class="fa-solid fa-bell"></i>
+
+<span>Notifications</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+<i class="fa-solid fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="index.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<span>Logout</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ===================== -->
+<!-- Main -->
+<!-- ===================== -->
+
+<main class="main-content">
+
+<header class="topbar">
+
+<div class="menu-btn">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Search Orders...">
+
+</div>
+
+<div class="top-right">
+
+<i class="fa-solid fa-bell"></i>
+
+<img
+src="images/default-avatar.png"
+class="profile-img"
+alt="Profile">
+
+</div>
+
+</header>
+
+<!-- ===================== -->
+<!-- Hero -->
+<!-- ===================== -->
+
+<section class="hero">
+
+<h1>
+
+Orders Management
+
+</h1>
+
+<p>
+
+Track every client order, manage deliveries, revisions and earnings from one place.
+
+</p>
+
+</section>
+<!-- ===================================== -->
+<!-- ORDER STATISTICS -->
+<!-- ===================================== -->
+
+<section class="stats-grid">
+
+<div class="card">
+
+<div class="card-icon blue">
+<i class="fa-solid fa-box"></i>
+</div>
+
+<div class="card-info">
+<h3>Total Orders</h3>
+<h2>0</h2>
+<p>No orders received yet</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon orange">
+<i class="fa-solid fa-hourglass-half"></i>
+</div>
+
+<div class="card-info">
+<h3>Pending Orders</h3>
+<h2>0</h2>
+<p>Waiting for acceptance</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon green">
+<i class="fa-solid fa-check-double"></i>
+</div>
+
+<div class="card-info">
+<h3>Completed Orders</h3>
+<h2>0</h2>
+<p>Successfully delivered</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon purple">
+<i class="fa-solid fa-dollar-sign"></i>
+</div>
+
+<div class="card-info">
+<h3>Total Revenue</h3>
+<h2>$0</h2>
+<p>Available Balance</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- QUICK OVERVIEW -->
+<!-- ===================================== -->
+
+<section class="overview-grid">
+
+<div class="overview-card">
+
+<h2>
+<i class="fa-solid fa-chart-line"></i>
+Today's Performance
+</h2>
+
+<div class="overview-list">
+
+<div class="overview-item">
+<span>Orders Today</span>
+<strong>0</strong>
+</div>
+
+<div class="overview-item">
+<span>Revenue Today</span>
+<strong>$0</strong>
+</div>
+
+<div class="overview-item">
+<span>Pending Deliveries</span>
+<strong>0</strong>
+</div>
+
+<div class="overview-item">
+<span>Late Orders</span>
+<strong>0</strong>
+</div>
+
+</div>
+
+</div>
+
+<div class="overview-card">
+
+<h2>
+<i class="fa-solid fa-trophy"></i>
+Seller Status
+</h2>
+
+<div class="seller-status">
+
+<div class="status-row">
+<span>Level</span>
+<strong>New Seller</strong>
+</div>
+
+<div class="status-row">
+<span>Response Rate</span>
+<strong>100%</strong>
+</div>
+
+<div class="status-row">
+<span>Completion Rate</span>
+<strong>100%</strong>
+</div>
+
+<div class="status-row">
+<span>Average Rating</span>
+<strong>0.0 ⭐</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===================================== -->
+<!-- SEARCH & FILTERS -->
+<!-- ===================================== -->
+
+<section class="orders-toolbar">
+
+<div class="toolbar-left">
+
+<div class="search-order">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+id="orderSearch"
+placeholder="Search by Order ID, Client or Service...">
+
+</div>
+
+</div>
+
+<div class="toolbar-right">
+
+<select id="statusFilter">
+
+<option value="all">All Orders</option>
+<option value="pending">Pending</option>
+<option value="active">Active</option>
+<option value="revision">Revision</option>
+<option value="delivered">Delivered</option>
+<option value="completed">Completed</option>
+<option value="cancelled">Cancelled</option>
+
+</select>
+
+<select id="sortOrders">
+
+<option>Newest First</option>
+<option>Oldest First</option>
+<option>Highest Price</option>
+<option>Lowest Price</option>
+
+</select>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- ORDERS TABLE -->
+<!-- ===================================== -->
+
+<section class="orders-panel">
+
+<div class="panel-header">
+
+<h2>
+
+<i class="fa-solid fa-list-check"></i>
+
+All Orders
+
+</h2>
+
+<span class="orders-count">
+
+0 Orders
+
+</span>
+
+</div>
+
+<div class="table-wrapper">
+
+<table class="orders-table">
+
+<thead>
+
+<tr>
+
+<th>Order ID</th>
+
+<th>Client</th>
+
+<th>Service</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+<th>Delivery</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#1001</td>
+
+<td>
+
+<div class="client-info">
+
+<img
+src="images/default-avatar.png"
+alt="Client">
+
+<div>
+
+<h4>No Client</h4>
+
+<small>client@email.com</small>
+
+</div>
+
+</div>
+
+</td>
+
+<td>
+
+Professional Logo Design
+
+</td>
+
+<td>
+
+<strong>$10</strong>
+
+</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+2 Days
+
+</td>
+
+<td>
+
+<div class="action-group">
+
+<button class="view-btn">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="chat-btn">
+
+<i class="fa-solid fa-message"></i>
+
+</button>
+
+<button class="deliver-btn">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+</button>
+
+</div>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+<!-- ===================================== -->
+<!-- ACTIVE ORDERS -->
+<!-- ===================================== -->
+
+<section class="active-orders">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-bolt"></i>
+
+Active Orders
+
+</h2>
+
+<a href="#">
+View All
+</a>
+
+</div>
+
+<div class="orders-grid">
+
+<!-- Order Card -->
+
+<div class="order-card urgent">
+
+<div class="order-top">
+
+<span class="status-badge urgent">
+
+Urgent
+
+</span>
+
+<h3>#1002</h3>
+
+</div>
+
+<h2>
+
+Professional Logo Design
+
+</h2>
+
+<p>
+
+Client:
+<strong>John Smith</strong>
+
+</p>
+
+<div class="progress-box">
+
+<div class="progress-info">
+
+<span>Progress</span>
+
+<span>0%</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div class="progress-fill"
+style="width:0%"></div>
+
+</div>
+
+</div>
+
+<div class="countdown">
+
+<i class="fa-solid fa-clock"></i>
+
+2 Days Remaining
+
+</div>
+
+<div class="order-actions">
+
+<button class="primary-btn">
+
+Open Order
+
+</button>
+
+<button class="secondary-btn">
+
+Message
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Empty Card -->
+
+<div class="order-card empty">
+
+<i class="fa-solid fa-box-open"></i>
+
+<h3>
+
+No Active Orders
+
+</h3>
+
+<p>
+
+Your active client projects will appear here.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- RECENT ACTIVITY -->
+<!-- ===================================== -->
+
+<section class="activity-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+Recent Activity
+
+</h2>
+
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+<div class="timeline-content">
+
+<h4>
+
+Marketplace Ready
+
+</h4>
+
+<p>
+
+Your Orders dashboard has been created successfully.
+
+</p>
+
+<small>
+
+Just now
+
+</small>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-icon">
+
+<i class="fa-solid fa-user-plus"></i>
+
+</div>
+
+<div class="timeline-content">
+
+<h4>
+
+Waiting for Clients
+
+</h4>
+
+<p>
+
+New client orders will automatically appear here.
+
+</p>
+
+<small>
+
+Today
+
+</small>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===================================== -->
+<!-- ORDER DETAILS MODAL -->
+<!-- ===================================== -->
+
+<div class="modal" id="orderDetailsModal">
+
+<div class="modal-content large">
+
+<div class="modal-header">
+
+<h2>
+
+<i class="fa-solid fa-file-invoice"></i>
+
+Order Details
+
+</h2>
+
+<button class="close-modal">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<div class="details-grid">
+
+<div class="detail-card">
+
+<h4>Order ID</h4>
+
+<p>#1001</p>
+
+</div>
+
+<div class="detail-card">
+
+<h4>Client</h4>
+
+<p>John Smith</p>
+
+</div>
+
+<div class="detail-card">
+
+<h4>Service</h4>
+
+<p>Professional Logo Design</p>
+
+</div>
+
+<div class="detail-card">
+
+<h4>Budget</h4>
+
+<p>$10</p>
+
+</div>
+
+<div class="detail-card">
+
+<h4>Delivery Date</h4>
+
+<p>2 Days Remaining</p>
+
+</div>
+
+<div class="detail-card">
+
+<h4>Status</h4>
+
+<p>Pending</p>
+
+</div>
+
+</div>
+
+<div class="requirements-box">
+
+<h3>
+
+Client Requirements
+
+</h3>
+
+<p>
+
+No requirements submitted yet.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================================== -->
+<!-- DELIVER ORDER MODAL -->
+<!-- ===================================== -->
+
+<div class="modal" id="deliverModal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h2>
+
+Deliver Order
+
+</h2>
+
+<button class="close-modal">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<label>
+
+Delivery Message
+
+</label>
+
+<textarea
+rows="6"
+placeholder="Write a message to the client..."></textarea>
+
+<label>
+
+Upload Final Files
+
+</label>
+
+<input
+type="file"
+multiple>
+
+<div class="modal-actions">
+
+<button class="cancel-btn">
+
+Cancel
+
+</button>
+
+<button class="deliver-confirm-btn">
+
+Deliver Now
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================================== -->
+<!-- REVISION REQUEST MODAL -->
+<!-- ===================================== -->
+
+<div class="modal" id="revisionModal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h2>
+
+Request Revision
+
+</h2>
+
+<button class="close-modal">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<textarea
+rows="6"
+placeholder="Describe what needs to be revised..."></textarea>
+
+<div class="modal-actions">
+
+<button class="cancel-btn">
+
+Cancel
+
+</button>
+
+<button class="revision-btn">
+
+Send Request
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<!-- ===================================== -->
+<!-- CLIENT CHAT -->
+<!-- ===================================== -->
+
+<section class="chat-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-comments"></i>
+
+Client Conversation
+
+</h2>
+
+<span class="online-status">
+
+<i class="fa-solid fa-circle"></i>
+
+Offline
+
+</span>
+
+</div>
+
+<div class="chat-box">
+
+<div class="chat-message client">
+
+<img src="images/default-avatar.png" alt="Client">
+
+<div class="message">
+
+<h4>Client</h4>
+
+<p>No messages yet.</p>
+
+<span>--:--</span>
+
+</div>
+
+</div>
+
+<div class="chat-message freelancer">
+
+<img src="images/default-avatar.png" alt="Freelancer">
+
+<div class="message">
+
+<h4>You</h4>
+
+<p>Waiting for first order.</p>
+
+<span>--:--</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="chat-input">
+
+<input
+type="text"
+placeholder="Type your message...">
+
+<button>
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Send
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- FILES -->
+<!-- ===================================== -->
+
+<section class="files-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-folder-open"></i>
+
+Order Files
+
+</h2>
+
+</div>
+
+<div class="files-grid">
+
+<div class="file-card">
+
+<i class="fa-solid fa-file-arrow-up"></i>
+
+<h3>Upload Files</h3>
+
+<p>Share work with your client.</p>
+
+<input type="file" multiple>
+
+</div>
+
+<div class="file-card">
+
+<i class="fa-solid fa-download"></i>
+
+<h3>Client Files</h3>
+
+<p>No files uploaded yet.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- PAYMENT SUMMARY -->
+<!-- ===================================== -->
+
+<section class="payment-summary">
+
+<h2>
+
+<i class="fa-solid fa-wallet"></i>
+
+Payment Summary
+
+</h2>
+
+<div class="payment-grid">
+
+<div class="payment-card">
+
+<h3>Order Value</h3>
+
+<h2>$0</h2>
+
+</div>
+
+<div class="payment-card">
+
+<h3>Marketplace Fee</h3>
+
+<h2>$0</h2>
+
+</div>
+
+<div class="payment-card">
+
+<h3>You Receive</h3>
+
+<h2>$0</h2>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- ORDER TIMELINE -->
+<!-- ===================================== -->
+
+<section class="timeline-section">
+
+<h2>
+
+<i class="fa-solid fa-timeline"></i>
+
+Order Timeline
+
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-text">
+
+<h4>Order Created</h4>
+
+<p>Waiting for first order.</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-text">
+
+<h4>Work Started</h4>
+
+<p>Not started.</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-text">
+
+<h4>Delivered</h4>
+
+<p>Pending.</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-text">
+
+<h4>Completed</h4>
+
+<p>Pending.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===================================== -->
+<!-- CLIENT REVIEW -->
+<!-- ===================================== -->
+
+<section class="review-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-star"></i>
+
+Client Reviews
+
+</h2>
+
+</div>
+
+<div class="review-card">
+
+<div class="review-user">
+
+<img src="images/default-avatar.png" alt="Client">
+
+<div>
+
+<h3>No Reviews Yet</h3>
+
+<p>Your completed order reviews will appear here.</p>
+
+</div>
+
+</div>
+
+<div class="review-rating">
+
+★★★★★
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- ORDER ANALYTICS -->
+<!-- ===================================== -->
+
+<section class="analytics-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-chart-pie"></i>
+
+Order Analytics
+
+</h2>
+
+</div>
+
+<div class="analytics-grid">
+
+<div class="analytics-card">
+
+<i class="fa-solid fa-eye"></i>
+
+<h3>Views</h3>
+
+<h2>0</h2>
+
+</div>
+
+<div class="analytics-card">
+
+<i class="fa-solid fa-hand-pointer"></i>
+
+<h3>Clicks</h3>
+
+<h2>0</h2>
+
+</div>
+
+<div class="analytics-card">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<h3>Orders</h3>
+
+<h2>0</h2>
+
+</div>
+
+<div class="analytics-card">
+
+<i class="fa-solid fa-percent"></i>
+
+<h3>Success Rate</h3>
+
+<h2>100%</h2>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- PRODUCTIVITY -->
+<!-- ===================================== -->
+
+<section class="productivity-section">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-gauge-high"></i>
+
+Productivity
+
+</h2>
+
+</div>
+
+<div class="productivity-grid">
+
+<div class="productivity-card">
+
+<h3>Orders This Week</h3>
+
+<h2>0</h2>
+
+</div>
+
+<div class="productivity-card">
+
+<h3>Orders This Month</h3>
+
+<h2>0</h2>
+
+</div>
+
+<div class="productivity-card">
+
+<h3>Average Delivery</h3>
+
+<h2>0 Days</h2>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- QUICK ACTIONS -->
+<!-- ===================================== -->
+
+<section class="quick-actions">
+
+<h2>
+
+<i class="fa-solid fa-bolt"></i>
+
+Quick Actions
+
+</h2>
+
+<div class="actions-grid">
+
+<button class="action-btn">
+
+<i class="fa-solid fa-plus"></i>
+
+Create Service
+
+</button>
+
+<button class="action-btn">
+
+<i class="fa-solid fa-layer-group"></i>
+
+My Services
+
+</button>
+
+<button class="action-btn">
+
+<i class="fa-solid fa-wallet"></i>
+
+Withdraw Earnings
+
+</button>
+
+<button class="action-btn">
+
+<i class="fa-solid fa-headset"></i>
+
+Support
+
+</button>
+
+</div>
+
+</section>
+<!-- ===================================== -->
+<!-- AMD SMART INSIGHTS -->
+<!-- ===================================== -->
+
+<section class="smart-insights">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-brain"></i>
+
+AMD Smart Insights
+
+</h2>
+
+</div>
+
+<div class="insights-grid">
+
+<div class="insight-card">
+
+<i class="fa-solid fa-lightbulb"></i>
+
+<h3>Optimization Tip</h3>
+
+<p>
+
+Respond to new orders within one hour to improve your seller ranking.
+
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<i class="fa-solid fa-ranking-star"></i>
+
+<h3>Growth Tip</h3>
+
+<p>
+
+Deliver orders before the deadline to increase buyer satisfaction.
+
+</p>
+
+</div>
+
+<div class="insight-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Quality Tip</h3>
+
+<p>
+
+Upload high-quality final files and communicate clearly with clients.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- NOTIFICATIONS -->
+<!-- ===================================== -->
+
+<section class="notifications-panel">
+
+<div class="section-header">
+
+<h2>
+
+<i class="fa-solid fa-bell"></i>
+
+Notifications
+
+</h2>
+
+</div>
+
+<div class="notification-item">
+
+<i class="fa-solid fa-circle-info"></i>
+
+<div>
+
+<h4>No Notifications</h4>
+
+<p>
+
+Order notifications will appear here automatically.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- EMPTY STATE -->
+<!-- ===================================== -->
+
+<section class="empty-state">
+
+<i class="fa-solid fa-box-open"></i>
+
+<h2>
+
+No Orders Yet
+
+</h2>
+
+<p>
+
+Once clients purchase your services, every order will appear here with real-time tracking.
+
+</p>
+
+<a href="myservices.html" class="primary-btn">
+
+<i class="fa-solid fa-plus"></i>
+
+Create Your First Service
+
+</a>
+
+</section>
+
+<!-- ===================================== -->
+<!-- FOOTER -->
+<!-- ===================================== -->
+
+<footer class="dashboard-footer">
+
+<p>
+
+© 2026 AMD Marketplace. All Rights Reserved.
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="orders.js"></script>
+
+</body>
+</html>
