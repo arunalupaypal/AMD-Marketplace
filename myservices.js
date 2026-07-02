@@ -181,7 +181,7 @@ document.querySelectorAll(".create-btn,.create-service-btn").forEach(btn=>{
 
 btn.addEventListener("click",()=>{
 
-alert("Create Service page coming soon.");
+window.location.href = "create-service.html";
 
 });
 
