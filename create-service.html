@@ -1,1 +1,997 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Create New Service | AMD Marketplace</title>
+
+<link rel="icon" type="image/png" href="images/dj.png">
+
+<link rel="stylesheet" href="create-service.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="bg-blur blur1"></div>
+<div class="bg-blur blur2"></div>
+<div class="bg-blur blur3"></div>
+
+<div class="dashboard">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<img src="images/dj.png" alt="AMD">
+
+<h2>AMD</h2>
+
+</div>
+
+<ul>
+
+<li>
+<a href="freelancer-dashboard.html">
+<i class="fa-solid fa-house"></i>
+<span>Dashboard</span>
+</a>
+</li>
+
+<li class="active">
+<a href="myservices.html">
+<i class="fa-solid fa-layer-group"></i>
+<span>My Services</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-box"></i>
+<span>Orders</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-message"></i>
+<span>Messages</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-wallet"></i>
+<span>Earnings</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-star"></i>
+<span>Reviews</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-bell"></i>
+<span>Notifications</span>
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-gear"></i>
+<span>Settings</span>
+</a>
+</li>
+
+<li>
+<a href="index.html">
+<i class="fa-solid fa-right-from-bracket"></i>
+<span>Logout</span>
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ================= MAIN ================= -->
+
+<main class="main-content">
+
+<header class="topbar">
+
+<div class="menu-btn">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+<div class="page-title">
+
+<h2>Create New Service</h2>
+
+</div>
+
+<div class="top-right">
+
+<img src="images/default-avatar.png"
+class="profile-img">
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<h1>Create Your Marketplace Service</h1>
+
+<p>
+
+Publish professional services and reach clients worldwide.
+
+</p>
+
+</section>
+
+<!-- ================= PROGRESS ================= -->
+
+<div class="wizard-progress">
+
+<div class="progress-line"></div>
+
+<div class="step active">
+
+<div class="circle">1</div>
+
+<p>Basic Info</p>
+
+</div>
+
+<div class="step">
+
+<div class="circle">2</div>
+
+<p>Pricing</p>
+
+</div>
+
+<div class="step">
+
+<div class="circle">3</div>
+
+<p>Description</p>
+
+</div>
+
+<div class="step">
+
+<div class="circle">4</div>
+
+<p>Portfolio</p>
+
+</div>
+
+<div class="step">
+
+<div class="circle">5</div>
+
+<p>Publish</p>
+
+</div>
+
+</div>
+
+<!-- ================= STEP 1 ================= -->
+
+<section class="step-card active-step">
+
+<h2>
+
+<i class="fa-solid fa-circle-info"></i>
+
+Basic Information
+
+</h2>
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label>
+
+Service Title
+
+</label>
+
+<input
+type="text"
+id="serviceTitle"
+maxlength="100"
+placeholder="Example: Professional Logo Design">
+
+<small id="titleCounter">
+
+0 / 100
+
+</small>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Category
+
+</label>
+
+<select id="category">
+
+<option>Select Category</option>
+
+<option>Graphic Design</option>
+
+<option>Video Editing</option>
+
+<option>Programming</option>
+
+<option>Writing</option>
+
+<option>Marketing</option>
+
+<option>Music</option>
+
+<option>Photography</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Sub Category
+
+</label>
+
+<select id="subcategory">
+
+<option>Select Sub Category</option>
+
+</select>
+
+</div>
+<div class="form-group full">
+
+<label>
+
+Short Description
+
+</label>
+
+<textarea
+id="shortDescription"
+maxlength="300"
+placeholder="Write a short description about your service..."></textarea>
+
+<small id="descCounter">
+
+0 / 300
+
+</small>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Search Tags
+
+</label>
+
+<input
+type="text"
+id="tags"
+placeholder="logo, business, minimalist, branding">
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Language
+
+</label>
+
+<select id="language">
+
+<option>English</option>
+
+<option>Sinhala</option>
+
+<option>Tamil</option>
+
+<option>Spanish</option>
+
+<option>French</option>
+
+<option>German</option>
+
+<option>Japanese</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Experience Level
+
+</label>
+
+<select id="experience">
+
+<option>Beginner</option>
+
+<option>Intermediate</option>
+
+<option>Expert</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Delivery Type
+
+</label>
+
+<select id="deliveryType">
+
+<option>Digital Delivery</option>
+
+<option>Online Meeting</option>
+
+<option>Physical Delivery</option>
+
+</select>
+
+</div>
+
+<div class="form-group full">
+
+<label>
+
+Service Thumbnail
+
+</label>
+
+<div class="upload-box">
+
+<i class="fa-solid fa-cloud-arrow-up"></i>
+
+<p>
+
+Drag & Drop your cover image here
+
+</p>
+
+<input
+type="file"
+id="thumbnail"
+accept="image/*">
+
+</div>
+
+<div class="preview-image">
+
+<img
+id="thumbnailPreview"
+src=""
+alt="Preview">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="step-buttons">
+
+<button
+type="button"
+class="next-btn">
+
+Continue
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- STEP 2 - PRICING -->
+<!-- ========================= -->
+
+<section class="step-card">
+
+<h2>
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+Pricing Packages
+
+</h2>
+
+<div class="packages">
+
+<!-- BASIC -->
+
+<div class="package-card">
+
+<h3>Basic Package</h3>
+
+<div class="form-group">
+
+<label>Package Name</label>
+
+<input
+type="text"
+id="basicName"
+placeholder="Basic">
+
+</div>
+
+<div class="form-group">
+
+<label>Price ($)</label>
+
+<input
+type="number"
+id="basicPrice"
+placeholder="10">
+
+</div>
+
+<div class="form-group">
+
+<label>Delivery Time</label>
+
+<select id="basicDelivery">
+
+<option>1 Day</option>
+
+<option>2 Days</option>
+
+<option>3 Days</option>
+
+<option>5 Days</option>
+
+<option>7 Days</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Revisions</label>
+
+<select id="basicRevision">
+
+<option>1</option>
+
+<option>2</option>
+
+<option>3</option>
+
+<option>Unlimited</option>
+
+</select>
+
+</div>
+
+</div>
+
+<!-- STANDARD -->
+
+<div class="package-card">
+
+<h3>Standard Package</h3>
+
+<div class="form-group">
+
+<label>Package Name</label>
+
+<input
+type="text"
+id="standardName"
+placeholder="Standard">
+
+</div>
+
+<div class="form-group">
+
+<label>Price ($)</label>
+
+<input
+type="number"
+id="standardPrice"
+placeholder="25">
+
+</div>
+
+  <div class="form-group">
+
+<label>Delivery Time</label>
+
+<select id="standardDelivery">
+
+<option>2 Days</option>
+<option>3 Days</option>
+<option>5 Days</option>
+<option>7 Days</option>
+<option>10 Days</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Revisions</label>
+
+<select id="standardRevision">
+
+<option>2</option>
+<option>3</option>
+<option>5</option>
+<option>Unlimited</option>
+
+</select>
+
+</div>
+
+</div>
+
+<!-- PREMIUM -->
+
+<div class="package-card premium">
+
+<h3>Premium Package</h3>
+
+<div class="form-group">
+
+<label>Package Name</label>
+
+<input
+type="text"
+id="premiumName"
+placeholder="Premium">
+
+</div>
+
+<div class="form-group">
+
+<label>Price ($)</label>
+
+<input
+type="number"
+id="premiumPrice"
+placeholder="50">
+
+</div>
+
+<div class="form-group">
+
+<label>Delivery Time</label>
+
+<select id="premiumDelivery">
+
+<option>3 Days</option>
+<option>5 Days</option>
+<option>7 Days</option>
+<option>10 Days</option>
+<option>14 Days</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Revisions</label>
+
+<select id="premiumRevision">
+
+<option>5</option>
+<option>10</option>
+<option>Unlimited</option>
+
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Package Features -->
+
+<div class="form-group full">
+
+<label>Package Features</label>
+
+<textarea
+id="packageFeatures"
+rows="6"
+placeholder="Example:
+✔ High Quality Design
+✔ Source File
+✔ Commercial Use
+✔ Unlimited Revisions"></textarea>
+
+</div>
+
+<div class="step-buttons">
+
+<button
+type="button"
+class="prev-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Previous
+
+</button>
+
+<button
+type="button"
+class="next-btn">
+
+Continue
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- STEP 3 -->
+<!-- ========================= -->
+
+<section class="step-card">
+
+<h2>
+
+<i class="fa-solid fa-file-lines"></i>
+
+Description & Requirements
+
+</h2>
+
+<div class="form-grid">
+
+<div class="form-group full">
+
+<label>Full Service Description</label>
+
+<textarea
+id="fullDescription"
+rows="10"
+maxlength="5000"
+placeholder="Write a detailed description about your service..."></textarea>
+
+<small id="fullDescCounter">
+
+0 / 5000
+
+</small>
+
+</div>
+
+<div class="form-group full">
+
+<label>Client Requirements</label>
+
+<textarea
+id="requirements"
+rows="6"
+placeholder="What information should the buyer provide before you start?"></textarea>
+
+</div>
+
+<div class="form-group full">
+
+<label>Frequently Asked Questions (FAQ)</label>
+
+<textarea
+id="faq"
+rows="8"
+placeholder="Question 1:
+Answer...
+
+Question 2:
+Answer..."></textarea>
+
+</div>
+
+  <div class="step-buttons">
+
+<button type="button" class="prev-btn">
+<i class="fa-solid fa-arrow-left"></i>
+Previous
+</button>
+
+<button type="button" class="next-btn">
+Continue
+<i class="fa-solid fa-arrow-right"></i>
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= STEP 4 ================= -->
+
+<section class="step-card">
+
+<h2>
+<i class="fa-solid fa-images"></i>
+Portfolio & Media
+</h2>
+
+<div class="form-grid">
+
+<div class="form-group full">
+
+<label>Cover Image</label>
+
+<div class="upload-box">
+
+<i class="fa-solid fa-cloud-arrow-up"></i>
+
+<p>Upload your main service image</p>
+
+<input type="file" id="coverImage" accept="image/*">
+
+</div>
+
+</div>
+
+<div class="form-group full">
+
+<label>Gallery Images</label>
+
+<div class="upload-box">
+
+<i class="fa-solid fa-image"></i>
+
+<p>Upload up to 5 images</p>
+
+<input
+type="file"
+id="galleryImages"
+accept="image/*"
+multiple>
+
+</div>
+
+</div>
+
+<div class="form-group full">
+
+<label>Portfolio Video (Optional)</label>
+
+<div class="upload-box">
+
+<i class="fa-solid fa-video"></i>
+
+<p>Upload a portfolio video</p>
+
+<input
+type="file"
+id="portfolioVideo"
+accept="video/*">
+
+</div>
+
+</div>
+
+<div class="form-group full">
+
+<label>Portfolio PDF (Optional)</label>
+
+<div class="upload-box">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+<p>Upload portfolio PDF</p>
+
+<input
+type="file"
+id="portfolioPdf"
+accept=".pdf">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="step-buttons">
+
+<button
+type="button"
+class="prev-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Previous
+
+</button>
+
+<button
+type="button"
+class="next-btn">
+
+Continue
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= STEP 5 ================= -->
+
+<section class="step-card">
+
+<h2>
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Review & Publish
+
+</h2>
+
+<div class="review-card">
+
+<h3>Service Checklist</h3>
+
+<ul>
+
+<li>✅ Basic Information</li>
+
+<li>✅ Pricing</li>
+
+<li>✅ Description</li>
+
+<li>✅ Portfolio</li>
+
+</ul>
+
+<div class="review-stats">
+
+<div class="score-card">
+
+<h3>SEO Score</h3>
+
+<h2>95%</h2>
+
+</div>
+
+<div class="score-card">
+
+<h3>Profile Score</h3>
+
+<h2>100%</h2>
+
+</div>
+
+<div class="score-card">
+
+<h3>Service Quality</h3>
+
+<h2>Excellent</h2>
+
+</div>
+
+</div>
+
+  <div class="publish-actions">
+
+<button
+type="button"
+class="save-draft-btn">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Draft
+
+</button>
+
+<button
+type="submit"
+class="publish-btn">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Publish Service
+
+</button>
+
+</div>
+
+</div>
+
+<div class="step-buttons">
+
+<button
+type="button"
+class="prev-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Previous
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="dashboard-footer">
+
+<p>
+
+© 2026 AMD Marketplace. All Rights Reserved.
+
+</p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="create-service.js"></script>
+
+</body>
+
+</html>
